@@ -26,16 +26,16 @@
 ### cell rather than the whole row!)
 
 # What was the 2015 salary of employee 57
-	my.data[5, 3]
+	my.data["57", "salary.2015"]
 
 # How many employees got a raise?
-	nrow(my.data[my.data$got.raise, ])
+	length(my.data$got.raise[my.data$got.raise])
 
 # What was the value of the highest raise?
 	max.raise <- max(my.data["raise"])
 
 # What was the "name" of the employee who received the highest raise?
-	my.data$employee[which(my.data$raise == max.raise)]
+	my.data$employee[my.data$raise == max.raise]
 
 # What was the largest decrease in salaries between the two years?
 	min.raise <- min(my.data["raise"])

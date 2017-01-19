@@ -34,7 +34,7 @@
 # Define a function `MostYardsScore` that takes in an argument `games` (a data frame) and
 # returns a descriptive sentence about the game that was played that had the most yards scored in it.
 	MostYardsScore <- function(games) {
-		most.yard.score <- games[which(games$combined == max(games["combined"])), ]
+		most.yard.score <- games[games$combined == max(games["combined"]), ]
 		return (paste("The game on", most.yard.score$date, "with", most.yard.score$opponent, 
 			"scored", most.yard.score$combined))
 	}
